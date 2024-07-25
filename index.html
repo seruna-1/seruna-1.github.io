@@ -5,18 +5,11 @@
 
 html, body {
 	height: 100%;
+	font-size: 100%;
 }
 
-#name {
-	width:100%;
-	height:100%;
-}
-
-#name div {
-	height:14%;
-	text-align: center;
-	vertical-align: baseline;
-	font-size: 1cm;
+#OO2-png {
+	border-style: solid;
 }
 
 </style>
@@ -26,39 +19,26 @@ html, body {
 </head>
 
 <body>
-	<div id="name">
-		<div class="letter"><p>T</p></div>
-		<div class="letter">H</div>
-		<div class="letter">A</div>
-		<div class="letter">I</div>
-		<div class="letter">S</div>
-		<div class="letter">S</div>
-		<div class="letter">A</div>
 
-	</div>
+	<h1>Oi</h1>
 
-	<script>
-		function sleep(ms) {
-			return new Promise(resolve => setTimeout(resolve, ms));
-		}
+	<p>Mateus Cezário Barreto (kalamado)</p>
+	<p>>.<</p>
 
-		async function main() {
-			var colors = ["Red", "Green", "Blue", "Gray", "Chocolate", "DarkGreen", "Olive", "Plum", "Tomato", "Orange"]
+	<img id="OO2-png" src="./OO-drawing-collection/OO2.png" alt="OO2.png">
 
-			var i = 0;
-			while (1) {
-				for (let letter = 0; letter < 7; letter++) {
-					var colorNumber = Math.floor(Math.random() * 10);
-					const element = document.getElementById("name");
-					const letters = element.querySelectorAll(".letter");
-					letters[letter].style.backgroundColor = colors[colorNumber];
-				}
-				await sleep(1000);
-				i++;
-			}
-		}
-		main();
-	</script>
+	<h1>Páginas</h1>
+
+	<a href="coloured-thaissa.html">Thaissa colorida</a>
+	<br>
+	<a href="OO-drawing-collection/index.html">Coleção de desenhos "OO"</a>
+
+	<h1>Resto<h1>
+	<p>Vo ver e te aviso.</p>
+
+<script>
+</script>
+
 </body>
 
 </html>

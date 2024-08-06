@@ -3,61 +3,142 @@
 
 <style>
 
-html, body {
+body {
+	width: 100%;
 	height: 100%;
 }
 
-#name {
-	width:100%;
-	height:100%;
+#actionsMenu {
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 12px;
 }
 
-#name div {
-	height:14%;
+#configSection {
+}
+
+.characterDiv {
+	width: 6vw;
+	heigth: 5vh;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
 	text-align: center;
-	vertical-align: baseline;
-	font-size: 1cm;
+	font-size: 4vw;
 }
 
 </style>
 
 <head>
-	<title>mateus</title>
+	<title>coloured name</title>
 </head>
 
 <body>
-	<div id="name">
-		<div class="letter"><p>T</p></div>
-		<div class="letter">H</div>
-		<div class="letter">A</div>
-		<div class="letter">I</div>
-		<div class="letter">S</div>
-		<div class="letter">S</div>
-		<div class="letter">A</div>
 
+	<div id="actionsMenu">
+		<input id="buttonToggleConfigDisplay" type="button" value="Config"></input>
+		<div id="configSection">
+			<input id="nameInputText" type="text"></input>
+			<input type="button" id="setName" value="Set name"></input>
+		</div>
 	</div>
+		
+	<div id="colouredName"></div>
 
 	<script>
+
+		/* List of avaiable colors */
+		const colors = ["Red", "Green", "Blue", "Gray", "Chocolate", "DarkGreen", "Olive", "Plum", "Tomato", "Orange"]
+
+		const configSection = document.getElementById("configSection");
+
+		const colouredName = document.getElementById("colouredName");
+
+		const buttonSetName = document.getElementById("setName");
+
+		buttonSetName.addEventListener("click", consumeName);
+
+		const buttonToggleConfigDisplay = document.getElementById("buttonToggleConfigDisplay");
+
+		buttonToggleConfigDisplay.addEventListener("click", toggleConfigDisplay);
+
+		const nameInput = document.getElementById("nameInputText");
+
+		let name;
+
+		let nameLength;
+
+
+		/* Pause */
 		function sleep(ms) {
 			return new Promise(resolve => setTimeout(resolve, ms));
 		}
 
-		async function main() {
-			var colors = ["Red", "Green", "Blue", "Gray", "Chocolate", "DarkGreen", "Olive", "Plum", "Tomato", "Orange"]
+		function isElementHidden (element) {
+			return window.getComputedStyle(element, null).getPropertyValue('display') === 'none';
+  		}
 
-			var i = 0;
+		
+		/*
+		Consumes name from name input field.
+		This function is bonded to [Set name] button.
+		*/
+		function consumeName() {
+			name = nameInput.value;
+			nameLength = name.length;
+			return;
+		}
+
+		function toggleConfigDisplay() {
+			if ( isElementHidden(configSection) ) {
+				configSection.style.display = "block";
+			}
+			else { configSection.style.display = "none"; }
+			return;
+		}
+
+
+		async function main() {
+
+			/* Default name */
+			name = "Thaissa";
+			nameLength = 7;
+
+			/* Position of current character being coloured and displayed */
+			let position;
+
+			/* Loop in which characters are displayed with random colors */
 			while (1) {
-				for (let letter = 0; letter < 7; letter++) {
+			
+				for (position = 0; position < nameLength; position++) {
+
+					/* Creates character box div */
+				
+					let characterDiv = document.createElement("div");
+					
 					var colorNumber = Math.floor(Math.random() * 10);
-					const element = document.getElementById("name");
-					const letters = element.querySelectorAll(".letter");
-					letters[letter].style.backgroundColor = colors[colorNumber];
+					
+					characterDiv.style.backgroundColor = colors[colorNumber];
+
+					characterDiv.setAttribute("class", "characterDiv");
+
+					characterDiv.append( name.charAt(position) );
+
+					colouredName.append(characterDiv);
+
+					
 				}
+
+				/* Pause */
 				await sleep(1000);
-				i++;
+
+				/* Clears div [colouredName] */
+				colouredName.replaceChildren();
 			}
 		}
+		
 		main();
+
 	</script>
 </body>
 

@@ -6,6 +6,8 @@
 body {
 	width: 100%;
 	height: 100%;
+	padding: 0px;
+	margin: 0px;
 }
 
 #actionsMenu {
@@ -18,8 +20,8 @@ body {
 }
 
 .characterDiv {
-	width: 6vw;
-	heigth: 5vh;
+	width: 100vw;
+	heigth: 6vh;
 	margin-left: auto;
 	margin-right: auto;
 	border-style: solid;
@@ -38,8 +40,15 @@ body {
 	<div id="actionsMenu">
 		<input id="buttonToggleConfigDisplay" type="button" value="Config"></input>
 		<div id="configSection">
+			<label for="nameInputText">Name</label>
 			<input id="nameInputText" type="text"></input>
-			<input type="button" id="setName" value="Set name"></input>
+			<input type="button" id="setName" value="Set"></input>
+
+			<label for="inputWidthPercentage">Width percentage</label>
+			<input id="inputWidthPercentage" type="text"></input>
+			<input type="button" id="setCharacterDivWidthPercentage" value="Set"></input>
+
+			
 		</div>
 	</div>
 		

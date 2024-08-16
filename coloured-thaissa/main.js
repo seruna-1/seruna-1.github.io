@@ -1,6 +1,8 @@
 /* List of avaiable colors */
 const colors = ["Red", "Green", "Black", "Gray", "Chocolate", "DarkGreen", "Olive", "#320552", "Tomato", "Orange"]
 
+const actionsMenu = document.getElementById("actionsMenu");
+
 const configSection = document.getElementById("configSection");
 
 const colouredName = document.getElementById("colouredName");
@@ -13,6 +15,10 @@ const buttonToggleConfigDisplay = document.getElementById("buttonToggleConfigDis
 
 buttonToggleConfigDisplay.addEventListener("click", toggleConfigDisplay);
 
+const setVerticalDirection = document.getElementById("buttonToggleConfigDisplay");
+
+setVerticalDirection.addEventListener("click", changeTextDirection);
+
 const nameInput = document.getElementById("nameInputText");
 
 let name = "Thaissa";
@@ -24,6 +30,14 @@ let displayLoop = setInterval(display, 1000);
 
 function isElementHidden (element) {
 	return window.getComputedStyle(element, null).getPropertyValue('display') === 'none';
+}
+
+function changeTextDirection () {
+	if (colouredName.style.display == "flex") {
+		colouredName.style.display = "grid";
+	}
+	else { colouredName.style.display = "flex"; }
+	return;
 }
 
 		
@@ -40,8 +54,12 @@ function consumeName() {
 function toggleConfigDisplay() {
 	if ( isElementHidden(configSection) ) {
 		configSection.style.display = "block";
+		actionsMenu.style.borderStyle = "dotted";
 	}
-	else { configSection.style.display = "none"; }
+	else {
+		actionsMenu.style.borderStyle = "unset";
+		configSection.style.display = "none";
+	}
 	return;
 }
 

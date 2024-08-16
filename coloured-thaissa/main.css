@@ -1,0 +1,29 @@
+#colouredName {
+	width: 50rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#actionsMenu {
+	width: fit-content;
+	margin: auto;
+	padding: 0.8rem;
+	margin-bottom: 3vh;
+	border: 0.2rem dotted Orange;
+	border-radius: 0.5rem;
+}
+
+#configSection {
+}
+
+.characterDiv {
+	width: 6rem;
+	heigth: 6rem;
+	margin: 0.5rem;
+	border-color: Orange;
+	border-style: solid;
+	border-radius: 0.5rem;
+	text-align: center;
+	font-size: 4rem;
+}
+

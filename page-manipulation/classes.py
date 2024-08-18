@@ -1,5 +1,5 @@
 # To parse html
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString, Tag
 
 
 
@@ -30,6 +30,12 @@ class Manipulator:
 		
 		self.pacient = BeautifulSoup(pacient, 'html.parser')
 
+		self.output_configuration = {
+			"identation string": "\t"
+		}
+
+		#print(self.pacient.html.head.title.contents)
+
 
 
 	'''
@@ -46,4 +52,76 @@ class Manipulator:
 		
 		element.append(template)
 
+
+	def output_attributes ( self, element ) :
+
+		attributes = ''
 		
+		return attributes
+
+
+
+	def ignorable_content ( string ) :
+		return
+		
+		
+
+	'''
+	[outputs as string]
+	'''
+	def output ( self, element, level ) :
+
+		output = ''
+
+		if element == 0:
+			element = self.pacient.html
+
+		name = element.name
+			
+		attributes = ''
+		
+		if type(element) is Tag:
+			
+			for key, value in element.attrs.items():
+
+				if type(value) is list:
+					value = ''.join(value)
+					
+				attributes += ' ' + key + '=\"' + value + '\"'
+				
+		opener = '<' + name + attributes + '>'
+
+		closer = '</' + name + '>'
+
+		identation = '\t'
+
+		output += (identation * level) + opener
+			
+		if (not element.contents) :
+			output += closer + '\n'
+			return output
+
+		elif (len(element.contents) == 1) and (type(element.contents[0] is NavigableString)) and (element.contents[0] != '\n') :
+			output += element.string + closer + '\n'
+			return output
+
+		else:
+
+			output += '\n'
+			
+			for child in element.contents:
+
+				#print(type(child))
+
+				if child == '\n':
+					continue
+
+				elif type(child) is NavigableString:
+					output += '\n' + (identation * (level + 1)) + child
+
+				elif type(child) is Tag:
+					output += '\n' + self.output(child, (level + 1)) 
+
+			output += '\n' + (identation * level) + closer + '\n'
+			return output
+

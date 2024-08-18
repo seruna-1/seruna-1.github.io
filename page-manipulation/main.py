@@ -33,6 +33,12 @@ def get_pages ( base_dir ):
 
 	return pages;
 
+
+
+
+	
+
+	
 '''
 [program entry point]
 
@@ -71,7 +77,7 @@ def main():
 	new_file.close()
 	'''
 
-	print(str(newManipulator.pacient))
+	print(newManipulator.output(0, 0))
 
 	return 0
 

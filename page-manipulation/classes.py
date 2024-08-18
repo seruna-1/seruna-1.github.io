@@ -23,19 +23,10 @@ class Domain:
 
 class Manipulator:
 
-	'''
-	[pacient] ~ [html in form of string that will be manipulated]
-	'''
-	def __init__ (self, pacient) :
+	def __init__ ( self, parsed ) :
 		
-		self.pacient = BeautifulSoup(pacient, 'html.parser')
-
-		self.output_configuration = {
-			"identation string": "\t"
-		}
-
-		#print(self.pacient.html.head.title.contents)
-
+		# BeautifulSoup document (parsed html file)
+		self.pacient = parsed
 
 
 	'''

@@ -10,7 +10,12 @@ from pathlib import Path
 # To manipulate html files
 from bs4 import BeautifulSoup
 
+# To get class [Manipulator]
 import classes
+
+# To get parsed html object from filenames and strings
+import get_soup as get_soup
+
 
 '''
 [base_dir] ~ [absolute path] to top directory
@@ -53,16 +58,17 @@ def main():
 	domain_path = sys.argv[1]
 	file_relative_path = sys.argv[2]
 
-	# Gets html string from file
-	with open(domain_path + '/' + file_relative_path, "r") as file:
-		html = file.read()
-
+	# Gets parsed html from file
+	html = get_soup.from_filename( sys.argv[1] + '/' + sys.argv[2] )
+	
+	'''
 	# Gets header string from file
 	with open(domain_path + '/' + "templates/header.html", "r") as file:
-		header = file.read()
+	header = get_soup.from_filename( sys.argv[2] )
+	'''
 
 	newManipulator = classes.Manipulator(html)
-	newManipulator.import_template(header, "header")
+	# newManipulator.import_template(header, "header")
 
 	'''
 	# Rename old html file

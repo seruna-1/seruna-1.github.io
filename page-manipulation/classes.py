@@ -5,6 +5,10 @@ from bs4 import BeautifulSoup, NavigableString, Tag
 
 class Domain:
 
+	def __init__ ( self, path ) :
+		self.path = path;
+		return
+
 	'''
 	[finds file]
 	[fragment] ~ [path fragment]

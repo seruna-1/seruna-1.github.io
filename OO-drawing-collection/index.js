@@ -7,7 +7,7 @@ const select = document.querySelector("select");
 const image = document.querySelector("img");
 
 /* Creates content of dropdown selector */
-for (let number = 1; number <= 7; number++)
+for (let number = 1; number <= 2; number++)
 {
 	name = "OO" + number.toString() + ".avif";
 	

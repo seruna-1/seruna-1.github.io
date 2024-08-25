@@ -13,6 +13,8 @@
 
 		<main>
 
+			<p><mark>Esse artigo ainda está sendo escrito!</mark></p>
+
 			<h1>Computador</h1>
 
 			<p>Um computador moderno de uso genérico (aquele que se usa para digitar textos, para navegar na internet, para ouvir música, para visualizar imagens e para consumir vídeos) é uma máquina que executa funções, como as já exemplificadas, e interage com o usuário, recebendo e despachando informação</p>
@@ -62,11 +64,54 @@
 
 			<p>Caso você queira experimentar usar um sistema operacional baseado em Linux pela primeira, considere instalar uma distro intuitiva, como Linux Mint. Ela é bem popular e existem vários vídeos no Youtube detalhando o processo de instalação. Se você já teve contato com uma distro mais intuitiva e quer se aventurar, note que, mesmo seguindo um passo a passo, ainda é possível que você se depare com algo que não compreenda ou com um procedimento que não funcione como você espera, ainda que você o entenda. Por isso, se pergunte: "Isso vale a pena? Eu gosto disso?". Se essa experiência te parecer agradável, apesar das dificuldades, então siga em frente.</p>
 
-			<p><mark>Set your heart ablaze!</mark></p>
-
 			<h1>Mídia de instalação</h1>
 
+			<p>Nesse artigo, eu usarei um pendrive como mídia de instalação</p>
+
+			<h1>Destino do novo sistema</h1>
+
+			<p>O Void Linux será instalado em um dispositivo de armazenamento. Ele pode ser um HDD ou SSD, mesmo que já haja outro sistema operacional instalado.</p>
+
+			<p>O Void Linux também pode ser instalado em um pendrive, que a opção que eu vou utilizar.</p>
+
+			<h1>Particionamento</h1>
+
+			<p>Preciso preparar a unidade externa para a instalação. Para isso, após conectá-la ao meu computador, descobrirei o nome do arquivo de dispositivo associado ao meu pendrive.</p>
+
+			<p>Caso você não seja familiar com sistemas baseados em Linux, isso talvez pareça estranho, mas o kernel Linux, ao reconhecer um dispositivo, associa ele a um arquivo. Esse arquivo é uma interface que existe na memória para que programas interajam com o kernel ou com dispositivos por intermédio do kernel.</p>
+
+			<p>Quando o kernel Linux de meu computador detecta o pendrive no qual instalarei o Void Linux, ele associa esse dispositivo à um arquivo. Para proceder com a instalação, preciso descobrir o nome desse arquivo.</p>
+			
+			<p>
+				<span>Para listar todos os dispositivos de armazenamento e seus respectivos nomes, executo o comando </span>
+				<code>fdisk -l</code>
+				<span>.</span>
+			</p>
+
 			<p></p>
+
+			<img src="20240825_11h18m44s_grim.png" />
+			<img src="20240825_11h19m05s_grim.png" />
+
+			<p>Repare que existem 3 dispositivos de armazenamento detectados pelo meu kernel no momento ([nvme0n1], [/dev/sda] e [/dev/sdb]), e que eles estão contidos no diretório [ /dev ].</p>
+
+			<p>Junto ao nome de cada dispositivo, estão informações sobre ele. Por exemplo, ao lado do dispositivo associado ao arquivo [/dev/sdb], é possível perceber que ele possui capacidade de armazenamento de 57,3 GiB. Mais abaixo, podemos ver o modelo dele (um SanDisk 3.2Gen1). Esse é o meu pendrive.</p>
+
+			<img src="Year--2024-08-20-06.png" />
+
+			<p>Perceba que as partições da unidade de armazenamento também estão associadas a arquivos e que o nome de cada partição é o nome da unidade de armazenamento acrescida de um sufixo. Por exemplo, [/dev/sdb1] é a primeira partição do meu pendrive, [/dev/sdb2] é a segunda, e assim por diante.</p>
+
+			<img src="Year--2024-08-20-07.png" />
+
+			<p></p>
+
+			<p>
+				<span>Agora que eu sei que meu pendrive está associado ao arquivo [/dev/sdb], posso executar o comando </span>
+				<code>cfdisk /dev/sdb</code>
+				<span> para particioná-lo. Isso resultará na seguinte interface</span>
+			</p>
+
+			<img />
 			
 		</main>
 		

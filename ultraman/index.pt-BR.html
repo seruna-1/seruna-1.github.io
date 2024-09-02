@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Ultraman - biblioteca C para manipulação de texto</title>
+		<meta charset="UTF-8" lang="pt-BR" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../hanabi-css/main.css">
+	</head>
+
+	<body>
+
+		<header>
+
+			<div id="topNavigations">
+
+				<p><a href="../index.html">Home</a></p>
+
+				<input id="toggleSectionIndex" type="button" value="Sections" />
+
+			</div>
+
+			<h1>Ultraman - biblioteca C para manipulação de texto em UTF-8</h1>
+
+		</header>
+
+		<nav id="sectionIndex">
+		</nav>
+
+		<main>
+
+			<p>Ultraman é uma biblioteca em C para manipulação de texto. Ainda não começei a escrever o código para esse projeto. Por enquanto, ele é apenas uma idéia.</p>
+
+			<h1>Caracteres de largura variável para caracteres de largura fixa</h1>
+
+			<p>Na codificação UTF-8, um caractere pode ocupar de 1 à 4 bytes de memória.</p>
+
+			<p>Por exemplo, o caractere 'a' ocupa 1 byte de memória</p>
+
+			<code>[a] -> [binário] = [01100001]</code>
+
+			<br/>
+
+			<code>[a] -> [decimal] = [97]</code>
+
+			<p>Já o caractere 'ç' ocupa dois bytes de memória</p>
+
+			<div class="code">
+
+				<code>[ç] -> [biário] = [ [11000011] [10100111] sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss]</code>
+
+				<br/>
+
+				<code>[ç] -> [decimal] = [195 ]</code>
+
+			</div>
+
+			<p>As representações binárias acima estão em big-endian (lendo da esquerda para a direita, o bit mais significativo é o que está mais à esquerda). Caso você não faça idéia do que isso significa, pense assim: com 8 bits (1 byte), é possível representar 128 números, certo? Repare que o caractere [a], em UTF-8, é representado pelo número 97, então ele pode ser representado por um byte sem problemas. Mas o caractere [ç] equivale ao número 195. Isso é mais do que um byte pode representar, então para representá-lo, são necessários 2 bytes.</p>
+
+			<p>E assim por diante. Como é possível perceber, os caracteres mais comúns em documentos de texto são representados por menos bytes, enquanto caracteres mais raros de serem empregados, como [ç], são representados por mais bytes. Dessa forma, é possível englobar os caracteres Unicode e, ao mesmo tempo, poupar espaço.</p>
+
+			<h1>Ordem de leitura</h1>
+
+			<p>Imagine o seguinte: um computador está lendo um texto codificado em UTF-8. Quando ele lê um byte desse texto, como ele sabe se aquele byte representa um caractere isolado? Em UTF-8, um caractere pode ser representado por 1 à 4 bytes, certo? Pois bem, como saber se aquele byte inicial que foi lido representa, sozinho, um caractere, ou se ele necessita ler mais bytes para completar a representação. Se o caractere que está sendo lido for um [a], então aquele byte sozinho já basta. Se for um [ç], então é necessário ler o próximo byte, porque o [ç] é representado por 2 bytes.</p>
+
+			<p>Para solucionar esse impasse, basta olhar para os bits mais significativos desse byte. De novo, se você não sabe o que é isso, apenas volte à representação binária do caractere [a] e repare no bit mais à esquerda. Ele é um zero, né? Pois é, se o bit mais significativo do byte (ou o bit "mais à esquerda") for 0, então esse byte, sozinho, representa um caractere.</p>
+
+			<p>Por exemplo, dê uma olhada nesse byte, sabendo que ele está em UTF-8</p>
+
+			<code>[01110111]</code>
+
+			<p>Repare que ele começa com o bit 0. Isso significa que esse byte, sozinho, representa um caractere. À título de curiosidade, ele representa o caractere [m].</p>
+
+		</main>
+
+		<input id="goTopButton" type="button" value="Top" />
+
+	</body>
+
+	<script src="../hanabi-css/navigation.js"></script>
+
+</html>

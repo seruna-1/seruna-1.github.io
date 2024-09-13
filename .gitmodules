@@ -1,6 +1,3 @@
-[submodule "uebu-ryoiki-tenkai"]
-	path = uebu-ryoiki-tenkai
-	url = git@codeberg.org:kalamado/uebu-ryoiki-tenkai.git
 [submodule "hanabi-css"]
 	path = hanabi-css
 	url = git@codeberg.org:kalamado/hanabi-css.git

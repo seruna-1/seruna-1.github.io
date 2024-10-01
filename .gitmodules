@@ -1,3 +1,6 @@
 [submodule "hanabi-css"]
 	path = hanabi-css
 	url = https://codeberg.org/kalamado/hanabi-css.git
+[submodule "ultraman-documentation"]
+	path = ultraman-documentation
+	url = https://codeberg.org/kalamado/ultraman-documentation.git

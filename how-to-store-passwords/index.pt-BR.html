@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Como armazenar senhas</title>
+
+		<meta charset="UTF-8" lang="pt-BR" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="../hanabi-css/main.css">
+
+	</head>
+
+	<body>
+
+		<main>
+
+			<p>Uma boa idéia é armazenar senhas em um arquivo keepass (.kdbx). É um formato aberto, criptografado e que tem programas leitores em várias plataformas.</p>
+
+			<p>O risco de perda do arquivo pode ser mitigado armazenando-o em vários dispositivos.</p>
+
+			<p>Mas manter um arquivo com o mesmo nome em vários dipositivos pode fazer com que divergências surgam com o tempo.</p>
+
+			<p>Para tornar a sincronização simples, mantemos o arquivo principal [main-XXXX-XX-XX.kdbx] presente em todos os dispositivos, onde [XXXX-XX-XX] corresponde à data em que o arquivo foi criado, com ano, mês e dia, nessa ordem. Em cada dispositivo, criamos um arquivo vazio [local-XXXX-XX-XX.kdbx], também com data. Quando o usuário possuir uma nova senha, ele a adiciona ao arquivo local do dispositivo mais conveniente. Logo que possível, move as senhas dos arquivos locais para o arquivo principal, atualiza a data no nome do arquivo principal e copia esse arquivo para todos os dispositivos.</p>
+
+		</main>
+
+	</body>
+
+	<script src="../hanabi-css/main.js"></script>
+
+</html>

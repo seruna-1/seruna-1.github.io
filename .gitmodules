@@ -4,3 +4,6 @@
 [submodule "ultraman-documentation"]
 	path = ultraman-documentation
 	url = https://codeberg.org/kalamado/ultraman-documentation.git
+[submodule "file-indexer-documentation"]
+	path = file-indexer-documentation
+	url = https://codeberg.org/kalamado/file-indexer-documentation.git

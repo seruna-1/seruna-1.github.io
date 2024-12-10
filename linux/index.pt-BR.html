@@ -19,80 +19,75 @@
 
 			<h1>Computador</h1>
 
-			<p>Um computador moderno de uso genérico (aquele que se usa para digitar textos, para navegar na internet, para ouvir música, para visualizar imagens e para consumir vídeos) é uma máquina que executa funções, como as já exemplificadas, e interage com o usuário, recebendo e despachando informação</p>
+			<p>Computador é uma máquina que executa funções e interage com o usuário, recebendo e despachando informação</p>
 
-			<p>A entrada de informação é chamada de "input"; a saída, de "output".</p>
+			<p>A troca de informação entre humano e computador é feita por meio de dispositivos de interface (periféricos), como mouse, teclado, tela e alto-falantes.</p>
 
-			<p>Dispositivos de interface na comunicação entre usuário e computador são denominados periféricos. Mouse e teclado, que transmitem informação do usuário ao computador, são periféricos, assim como tela e dispositivos de saída de áudio, os quais transmitem informação do computador ao usuário.</p>
+			<p>As funções executadas por um computador podem ser programadas por um humano. Nesse caso, um conjunto de instruções escritas, armazenadas e executadas por um computador é nomeado "programa".</p>
 
-			<p>As funções executadas por um computador podem ser programadas por um humano. Nesse caso, o conjunto de instruções escrito, armazenado e executado por um computador é nomeado "programa" ou "software".</p>
+			<p>Essas funções incluem, comumente, editar textos e documentos, assistir vídeos, jogar, desenhar e outras coisas. Contudo, em uma análise mais interna, o computador é uma máquina que processa informações registradas como estados binários.</p>
 
-			<p>Além de instruções, a memória de um computador também pode armazenar dados não executáveis. A memória de acesso aleatório (RAM) e a unidade de estado sólido (SSD) são dispositivos que realizam essa função.</p>
+			<p>Um estado binário é aquele que tem duas possibilidades, comumente representadas como '0' e '1'. Toda informação que o computador processa (um número, um caractere, uma imagem, um vídeo ou qualquer outra coisa) consiste em uma sequência de estados binários.</p>
 
-			<p>A informação armazenada em uma memória de acesso aleatório é perdida caso a unidade seja privada de corrente elétrica por alguns segundos. Por esse motivo, esse dispositivo é considerado um tipo de memória volátil. Ainda assim, as instruções executadas em um processador estão contidas na RAM ou são tranferidas para lá a partir da memória não volátil, já que o tempo de acesso à informação e o desgaste são menores na memória volátil. Por esse motivo, o output do processador também é despejado na RAM</p>
+			<p>Como o formato binário não é compreensível aos sentidos humanos, os estados binários são convertidos em outros formatos de informação e emitidos ao usuário por meio de periféricos, assim como a interação não binária do usuário com os periféricos é convertida em informação binária ao ser recebida pelo computador.</p>
 
-			<p>Por exemplo, quando uma imagem é aberta em um editor de imagens, o processador transfere a imagem e o programa do disco rígido até a RAM. Após isso, as instruções do programa são lidas e executadas. Como, resultado a interface gráfica do programa aparece na tela do usuário, junto à imagem sendo editada. Quando o usuário usa o mouse para selecionar a ferramenta de pincel e desenhar algo sobre a imagem, essa alteração é registrada na RAM. Ao selecionar a opção [salvar], a imagem alterada será transferida da RAM para o disco rígido. Ao fechar o programa, ele é removido da RAM</p>
+			<p>Ao digitar um texto usando o teclado, nos guiamos pelas letras que vemos, mas, ao pressionar uma tecla, o que é enviado ao computador é uma sequência binária, ou, mais precisamente, uma sequência de variação na diferença de potencial da corrente elétrica, que oscila entre dois estados (representado por uma sequência de 0 e 1), a qual identifica determinada letra ou símbolo. A máquina não vê a letra como o usuário a vê.</p>
 
-			<p>Um conjunto de programas que interagem de forma organizada e funcional entre si é denominado "sistema operacional". Android, Windows e GNU/Linux são exemplos desses sistemas.</p>
+			<p>Para mostrar ao usuário qual letra ele teclou e qual letra foi inserida no documento de texto, a máquina, ao receber a sequência binária do teclado, exibe, na tela, a imagem de um caractere associada àquela seqência.</p>
 
-			<h1>GNU/Linux</h1>
+			<p>Além de instruções (executáveis), a memória de um computador pode armazenar dados não executáveis. A  e a unidade de estado sólido (SSD) são dispositivos que realizam essa função.</p>
 
-			<p>O termo "GNU/Linux" representa a união do GNU (uma coleção de software) e do núcleo Linux. Juntos, esses softwares compoem um sitema operacional.</p>
+			<p>Memória de acesso aleatório (RAM) é uma infraestrutura para armazenar informações que podem ser processadas diretamente pelo computador. Contudo, o conteúdo lá presente é comprometido caso a unidade seja privada de corrente elétrica por algum período.</p>
 
-			<h1>Linux</h1>
+			<p>Unidade de estado sólido (SSD) é outro tipo de memória, menos volátil. A integridade das informações presentes nesse dispositivo é mantida mesmo sem corrente elétrica. No entanto, elas não podem ser diretamente transferidas e recebidas do processador.</p>
 
-			<p>Línux é um núcleo (ou kernel), um tipo de software que gerencia os dispositivos mecânicos de um computador (como tela, disco rígido, saída de audio e RAM) e provê interfaces para que outros programas acessem esses mecanismos. Em outras palavras, o kernel é um intermediador entre hardware e software.</p>
+			<p>Para executar um programa ou para interagir com ima informação presente em uma unidade de estado sólido, ela é, primeiro, transferida à memória volátil.</p>
 
-			<h1>Coleção GNU</h1>
+			<h1>Sistema operacional</h1>
 
-			<p>GNU é uma coleção de programas. Por exemplo:</p>
+			<p>Um conjunto de programas que interagem de forma organizada e funcional entre si é denominado "sistema operacional". Android, Windows e GNU/Linux são exemplos.</p>
 
-			<ul>
-				<li>[cp] ~ [Copia um arquivo de um local do disco rígido para outro.]</li>
-				<li> [mkdir] ~ [Cria um diretório em um local do disco rígido.] </li>
-				<li>[touch] ~ [Cria um arquivo]</li>
-				<li>[ls] ~ [Lista o conteúdo de um diretório]</li>
-			</ul>
+			<p>O sistema operacional é iniciado quando o computador é ligado. Após os dispositivos serem irrigados com corrente elétrica e estarem prontos para funcionar, o processador executa instruções iniciais que buscam pelo núcleo de algum sistema operacional presente em um dispositivo de memória não volátil e o transferem para a memória volátil. Após isso, o gerenciamento da máquina passa a ser realizado por esse núcleo e o sistema inicia.</p>
+
+			<p>Um núcleo (ou kernel), um tipo de software que gerencia os dispositivos mecânicos de um computador (como tela, disco rígido, saída de audio e RAM) e provê interfaces para que outros programas acessem esses mecanismos. Um exemplo de núcleo é o Linux.</p>
 
 			<h1>Distribuições linux</h1>
 
-			<p>A união de GNU e Linux gera um sistema opracional, mas também é possível unir o Linux a outros programas e outras coleções além das presentes no GNU. Dessa liberdade de combinação surge uma imensidão de sistemas operacionais que usam núcleo Linux. Por isso, esses sistemas também são denominados distribuições linux. Algumas distribuições, como o Alpine, nem usam o GNU.</p>
+			<p>Distribuições linux são sistemas operacionais que associam um ecossistema de programas ao núcleo Linux.</p>
+
+			<p>Linux Mint foi a primeira distro que eu usei, se desconsiderarmos o Android e o Termux. A instalação é bem simples e essa distribuição oferece uma experiência similar à do Windows.</p>
+
+			<p>Atualmente, uso Void Linux.</p>
 
 			<h1>Instalação</h1>
 
-			<p>Void Linux é a distribuição linux que eu uso atualmente. Vou descrever o processo de instalação dessa distro para caso alguém se interesse (e para que eu mesmo não me esqueça 😅).</p>
+			<p>Vou descrever o processo de instalação do Void Linux (que é menos intuitivo que os de outras distros, como Ubuntu e Linux Mint).</p>
 
-			<p>O processo de instalação do Void Linux pode não parecer tão intuitivo quanto os de outras distros, como o Ubuntu e o Linux Mint. Na realidade, a primeira distro que eu instalei e usei foi o Linux Mint. Antes disso, eu apenas vislumbrava essa experiência em máquinas virtuais. A instalação do Linux Mint é bem simples e essa distribuição me ofereceu uma experiência similar àquela oferecida pelo Windows, mas com muito mais entusiasmo da minha parte, por motivos que talvez eu explore em outro artigo. Por hora, quero dizer que cada usuário tem uma relação singular com sistemas linux. Conquanto o Linux Mint oferecesse uma experiência suficientemente boa em relação à produtividade e possuisse uma interface bastante amigável, o meu aprofundamento no universo de computadores e software open-source me levaram à experimentar outras distros, como Debian, Arch Linux e, no momento, o Void Linux. Em cada transição, me deparei com desafios. Por fezes, ficava travado em alguma etapa da instalação ou sequer compreendia o processo e até desistia da idéia (sim, estou olhando pra você, Arch Linux). Entretanto, após ler mais sobre algum tópico (por curiosidade e entusiasmo) ou aprender algo novo, me sentia compelido a tentar novamente. Continuo com esse sentimento ainda hoje.</p>
-
-			<p>Caso você queira experimentar usar um sistema operacional baseado em Linux pela primeira, considere instalar uma distro intuitiva, como Linux Mint. Ela é bem popular e existem vários vídeos no Youtube detalhando o processo de instalação. Se você já teve contato com uma distro mais intuitiva e quer se aventurar, note que, mesmo seguindo um passo a passo, ainda é possível que você se depare com algo que não compreenda ou com um procedimento que não funcione como você espera, ainda que você o entenda. Por isso, se pergunte: "Isso vale a pena? Eu gosto disso?". Se essa experiência te parecer agradável, apesar das dificuldades, então siga em frente.</p>
-
-			<h1>Sistema inicial</h1>
-
-			<p>Para instalar uma distribuição linux definitiva, é necessário partir de algum sistema e, em alguns casos, passar por sistemas intermediários.</p>
-
-			<p>No geral, o sistema definitivo é instalado a partir de um pendrive com um sistema linux mínimo (referido como [pendrive bootável] ou [mídia de instalação]). Uma vantagem desse método é poder realizar várias instalações usando o mesmo pendrive e poder instalar o sistema definitivo em um computador diferente daquele na qual a mídia de instalação foi criada.</p>
-
-			<p>É possível criar uma mídia de instalação de uma distribuição linux a partir:</p>
+			<p>A instalação pode ser feita a partir de:</p>
 
 			<ul>
 
-				<li><a href="">do Windows</a></li>
+				<li><a href="">Um pendrive com uma mídia de instalação</a></li>
 
-				<li><a href="">de outra distribuição Linux</a></li>
+				<li><a href="">Uma distribuição linux já instalada</a></li>
 
 			</ul>
 
-			<p>Uma alternativa à mídia de instalação é instalar o sistema definitivo diretamente a partir do inicial, sem intermediários. Esse método é até mais fácil e mais rápido. Mas, nesse caso, o sistema definitivo será instalado no mesmo computador do sistema anterior, e em uma partições diferentes (necessário ter espaço livre no disco)</p>
+			<p>A mídia de instalação de uma distribuição linux é otimizada para caber em um portátil, como pendrive ou CD, para teste ou para instalação definitiva do sistema. É um sistema já fabricado e empacotado em um arquivo (geralmente do tipo iso), pronto para ser gravado em um pendrive. Isso pode ser feito a partir de vários sistemas que não são distribuições linux.</p>
 
-			<h1>Destino do novo sistema</h1>
-
-			<p>O Void Linux será instalado em um dispositivo de armazenamento. Ele pode ser um HDD ou SSD, mesmo que já haja outro sistema operacional instalado.</p>
-
-			<p>O Void Linux também pode ser instalado em um pendrive, que a opção que eu vou utilizar.</p>
+			<p>Em alguns casos em que já existe uma distribuição linux em uso, a mídia de instalação é dispensável.</p>
 
 			<h1>Particionamento</h1>
 
-			<p>Preciso preparar a unidade externa para a instalação. Para isso, após conectá-la ao meu computador, descobrirei o nome do arquivo de dispositivo associado ao meu pendrive.</p>
+			<p>É necessário designar uma partição que conterá aquilo que o carregador de boot inicial executará na inicialização do computador. Isso pode ser o núcleo Linux ou um gerenciador de boot. O formato dessa partição deve ser suportado pelo carregador de boot inicial. No geral, o FAT32 é a escolha, por ser suportado pelo padrão UEFI e por diversas fabricantes.</p>
+
+			<p>Caso não haja gerenciador de boot, o núcleo linux residirá nela, mas eu nunca tentei isso.</p>
+
+			<p>Caso o gerenciador de boot esteja nela, o núcleo Linux poderá estar nessa partição também, mas eu prefiro colocá-lo em uma partição separada.</p>
+
+			<p>A partição do núcleo Linux deve ter formato suportado pelo gerenciador de boot que o inicializará (de novo, o FAT32 é suportado na maioria dos casos).</p>
+
+			<p>A partição em que residirá o restante do sistema poderá ter qualquer formato suportado pelo Linux. Eu prefiro o BTRFS ou o EXT4.</p>
 
 			<p>Caso você não seja familiar com sistemas baseados em Linux, isso talvez pareça estranho, mas o kernel Linux, ao reconhecer um dispositivo, associa ele a um arquivo. Esse arquivo é uma interface que existe na memória para que programas interajam com o kernel ou com dispositivos por intermédio do kernel.</p>
 
@@ -107,6 +102,7 @@
 			<p></p>
 
 			<img src="20240825_11h18m44s_grim.png" />
+
 			<img src="20240825_11h19m05s_grim.png" />
 
 			<p>Repare que existem 3 dispositivos de armazenamento detectados pelo meu kernel no momento ([nvme0n1], [/dev/sda] e [/dev/sdb]), e que eles estão contidos no diretório [ /dev ].</p>

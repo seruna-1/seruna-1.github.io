@@ -1,6 +1,6 @@
-[submodule "hanabi-css"]
-	path = hanabi-css
-	url = https://codeberg.org/kalamado/hanabi-css.git
+[submodule "kaki"]
+	path = kaki
+	url = https://codeberg.org/kalamado/kaki.git
 [submodule "file-indexer-documentation"]
 	path = file-indexer-documentation
 	url = https://codeberg.org/kalamado/file-indexer-documentation.git
